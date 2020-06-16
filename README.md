@@ -1,2 +1,3 @@
-# general-playground
+# General Playground
+
 This repository contains a lot of experiments (studies, training, tests, etc)
