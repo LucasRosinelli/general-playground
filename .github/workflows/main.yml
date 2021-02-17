@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        dotnet-version: [ '5.0.100' ]
+        dotnet-version: [ '2.2.103', '3.0', '3.1.x', '5.0.100' ]
         os: ['Windows-latest', 'ubuntu-latest', 'macOS-latest']
     runs-on: ${{ matrix.os }}
     name: Build ${{ matrix.os }} with .NET ${{ matrix.dotnet-version }}
@@ -18,7 +18,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.100
+        dotnet-version: ${{ matrix.dotnet-version }}
     - name: Resetting nuget
       run: dotnet clean -c Release && dotnet nuget locals all --clear
     - name: Restore dependencies
