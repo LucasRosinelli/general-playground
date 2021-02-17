@@ -9,8 +9,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        dotnet-version: [ '2.2.103', '3.0', '3.1.x', '5.0.100' ]
+        dotnet-version: [ '3.0', '3.1.x', '5.0.100' ]
         os: ['Windows-latest', 'ubuntu-latest', 'macOS-latest']
+    defaults:
+      run:
+        shell: pwsh
     runs-on: ${{ matrix.os }}
     name: Build ${{ matrix.os }} with .NET ${{ matrix.dotnet-version }}
     steps:
