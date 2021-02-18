@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Authors>Lucas Rosinelli</Authors>
+    <Company>Lucas Rosinelli</Company>
+    <Description>Provides a solution for BluePrism Hackathon</Description>
+    <PackageProjectUrl>https://lucasrosinelli.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/LucasRosinelli/general-playground</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
